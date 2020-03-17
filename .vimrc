@@ -1,4 +1,5 @@
 " Basic configuration; c/o vimconfig.com
+syntax on
 set number	                " Show line numbers
 set showmatch	              " Highlight matching brace
 set hlsearch	              " Highlight all search results
@@ -22,6 +23,9 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'preservim/nerdtree'
 
+Plug 'dracula/vim', { 'as': 'dracula' }
+
+
 Plug 'itchyny/lightline.vim'
 set laststatus=2
 
@@ -36,3 +40,5 @@ Plug 'leafgarland/typescript-vim'
 
 " Initialize plugin system
 call plug#end()
+
+colorscheme dracula
