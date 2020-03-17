@@ -32,5 +32,7 @@ Plug 'elixir-editors/vim-elixir'
 
 Plug 'pangloss/vim-javascript'
 
+Plug 'leafgarland/typescript-vim'
+
 " Initialize plugin system
 call plug#end()
