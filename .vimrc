@@ -25,18 +25,24 @@ Plug 'preservim/nerdtree'
 
 Plug 'dracula/vim', { 'as': 'dracula' }
 
-
 Plug 'itchyny/lightline.vim'
 set laststatus=2
 
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+" Language-related plugins
+
 Plug 'elixir-editors/vim-elixir'
 
 Plug 'pangloss/vim-javascript'
 
 Plug 'leafgarland/typescript-vim'
+
+Plug 'plasticboy/vim-markdown'
 
 " Initialize plugin system
 call plug#end()
