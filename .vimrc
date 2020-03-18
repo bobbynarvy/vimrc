@@ -1,16 +1,22 @@
-" Basic configuration; c/o vimconfig.com
+" -------------------
+" Basic configuration
+" -------------------
 syntax on
 set encoding=UTF-8
-set number	                " Show line numbers
-set showmatch	              " Highlight matching brace
-set hlsearch	              " Highlight all search results
-set incsearch	              " Searches for strings incrementally
-set autoindent	            " Auto-indent new lines
-set expandtab	              " Use spaces instead of tabs
-set shiftwidth=2	          " Number of auto-indent spaces
-set smartindent	            " Enable smart-indent
-set smarttab	              " Enable smart-tabs
-set softtabstop=2	          " Number of spaces per Tab
+set number                      " Show line numbers
+set showmatch                   " Highlight matching brace
+set hlsearch                    " Highlight all search results
+set incsearch                   " Searches for strings incrementally
+set autoindent                  " Auto-indent new lines
+set expandtab                   " Use spaces instead of tabs
+set shiftwidth=2                " Number of auto-indent spaces
+set smartindent                 " Enable smart-indent
+set smarttab                    " Enable smart-tabs
+set softtabstop=2               " Number of spaces per Tab
+
+" -------
+" Plugins
+" -------
 
 " Install plug if not installed
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -52,7 +58,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 
 Plug 'plasticboy/vim-markdown'
-
 " NOTE: Make sure to install a patched font:
 " https://github.com/ryanoasis/nerd-fonts
 Plug 'ryanoasis/vim-devicons'
@@ -61,3 +66,11 @@ Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 colorscheme dracula
+
+" --------------
+" Key remappings
+" --------------
+
+" Remap :tabprev and :tabnext
+nnoremap H gT
+nnoremap L gt
