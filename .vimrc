@@ -1,5 +1,6 @@
 " Basic configuration; c/o vimconfig.com
 syntax on
+set encoding=UTF-8
 set number	                " Show line numbers
 set showmatch	              " Highlight matching brace
 set hlsearch	              " Highlight all search results
@@ -25,14 +26,22 @@ Plug 'preservim/nerdtree'
 
 Plug 'dracula/vim', { 'as': 'dracula' }
 
-Plug 'itchyny/lightline.vim'
-set laststatus=2
+Plug 'vim-airline/vim-airline'
+let g:airline_powerline_fonts = 1"
 
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
 
+Plug 'yggdroot/indentline'
+
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+Plug 'terryma/vim-multiple-cursors'
+
+" Git-related plugins
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 " Language-related plugins
 
@@ -43,6 +52,10 @@ Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 
 Plug 'plasticboy/vim-markdown'
+
+" NOTE: Make sure to install a patched font:
+" https://github.com/ryanoasis/nerd-fonts
+Plug 'ryanoasis/vim-devicons'
 
 " Initialize plugin system
 call plug#end()
