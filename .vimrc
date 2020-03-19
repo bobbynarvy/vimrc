@@ -43,6 +43,10 @@ Plug 'yggdroot/indentline'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+Plug 'dense-analysis/ale'
+" language-specific configs... make sure dependencies are installed
+let g:ale_typescript_tsserver_executable = './node_modules/typescript/lib/tsserver.js'
+
 Plug 'terryma/vim-multiple-cursors'
 
 " Git-related plugins
