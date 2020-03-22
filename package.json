@@ -1,6 +1,0 @@
-{
-  "description": "Node packages related to my vim configuration",
-  "dependencies": {
-    "typescript": "^3.8.3"
-  }
-}

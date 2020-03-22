@@ -44,8 +44,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 Plug 'dense-analysis/ale'
-" language-specific configs... make sure dependencies are installed
-let g:ale_typescript_tsserver_executable = './node_modules/typescript/lib/tsserver.js'
 
 Plug 'terryma/vim-multiple-cursors'
 
@@ -55,7 +53,9 @@ Plug 'airblade/vim-gitgutter'
 
 " Language-related plugins
 
+" Elixir
 Plug 'elixir-editors/vim-elixir'
+Plug 'slashmili/alchemist.vim'
 
 Plug 'pangloss/vim-javascript'
 
