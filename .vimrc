@@ -76,5 +76,11 @@ colorscheme dracula
 " --------------
 
 " Remap :tabprev and :tabnext
-nnoremap H gT
-nnoremap L gt
+nnoremap HH gT
+nnoremap LL gt
+
+" Remap window switching
+nnoremap H <C-W>h
+nnoremap J <C-W>j
+nnoremap K <C-W>k
+nnoremap L <C-W>l
