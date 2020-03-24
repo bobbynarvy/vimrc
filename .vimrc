@@ -28,12 +28,22 @@ endif
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
+
 Plug 'preservim/nerdtree'
 
 Plug 'dracula/vim', { 'as': 'dracula' }
 
 Plug 'vim-airline/vim-airline'
 let g:airline_powerline_fonts = 1"
+let g:airline#extensions#tabline#enabled = 1
 
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
