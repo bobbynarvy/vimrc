@@ -2,6 +2,7 @@
 " Basic configuration
 " -------------------
 syntax on
+set autoread
 set encoding=UTF-8
 set number                      " Show line numbers
 set showmatch                   " Highlight matching brace
@@ -72,6 +73,10 @@ Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 
 Plug 'plasticboy/vim-markdown'
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_conceal_code_blocks = 0
+
 " NOTE: Make sure to install a patched font:
 " https://github.com/ryanoasis/nerd-fonts
 Plug 'ryanoasis/vim-devicons'
@@ -94,3 +99,10 @@ nnoremap H <C-W>h
 nnoremap J <C-W>j
 nnoremap K <C-W>k
 nnoremap L <C-W>l
+
+" -----------------
+" Language settings
+" -----------------
+
+" run 'mix format' on save of elixir files
+autocmd BufWritePost *.exs,*.ex silent :!mix format %
