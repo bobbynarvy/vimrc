@@ -100,6 +100,16 @@ nnoremap J <C-W>j
 nnoremap K <C-W>k
 nnoremap L <C-W>l
 
+" --------
+" Commands
+" --------
+
+" Shortcuts for ALEGoToDefinition commands
+command Def    ALEGoToDefinition
+command Defs   ALEGoToDefinitionInSplit
+command Deft   ALEGoToDefinitionInTab
+command Defv   ALEGoToDefinitionInVSplit
+
 " -----------------
 " Language settings
 " -----------------
