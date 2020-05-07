@@ -51,6 +51,8 @@ let g:rainbow_active = 1
 
 Plug 'yggdroot/indentline'
 
+Plug 'tpope/vim-commentary'
+
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
