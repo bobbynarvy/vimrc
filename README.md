@@ -14,4 +14,6 @@ Some external dependencies are required by vim plugins:
 
 ### Installation notes:
 
-- When using with *tmux*, **airline** does not display properly. Make sure that `set -g default-terminal "screen-256color"` is set on `~/.tmux.conf`
+- When using with *tmux*, **airline** does not display properly. Make sure that `set -g default-terminal "screen-256color"` is set on `~/.tmux.conf`. 
+Do not forget to reload tmux with the configuration with `tmux source-file ~/.tmux.conf` from the shell.
+- Add `.swp` as files to be (globally) ignored by git. 
