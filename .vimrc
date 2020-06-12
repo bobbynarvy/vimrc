@@ -79,6 +79,10 @@ let g:vim_markdown_conceal = 0
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_conceal_code_blocks = 0
 
+Plug 'ekalinin/dockerfile.vim'
+
+Plug 'b4b4r07/vim-hcl'
+
 " NOTE: Make sure to install a patched font:
 " https://github.com/ryanoasis/nerd-fonts
 Plug 'ryanoasis/vim-devicons'
