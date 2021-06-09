@@ -53,8 +53,14 @@ Plug 'yggdroot/indentline'
 
 Plug 'tpope/vim-commentary'
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+if has('nvim')
+  Plug 'nvim-lua/popup.nvim'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
+else
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+endif
 
 Plug 'dense-analysis/ale'
 
@@ -105,6 +111,14 @@ nnoremap HH <C-W>h
 nnoremap JJ <C-W>j
 nnoremap KK <C-W>k
 nnoremap LL <C-W>l
+
+" Find files using Telescope command-line sugar.
+if has('nvim')
+  nnoremap <leader>ff <cmd>Telescope find_files<cr>
+  nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+  nnoremap <leader>fb <cmd>Telescope buffers<cr>
+  nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+endif
 
 " --------
 " Commands
