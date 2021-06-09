@@ -126,9 +126,9 @@ endif
 
 " Shortcuts for ALEGoToDefinition commands
 command Def    ALEGoToDefinition
-command Defs   ALEGoToDefinitionInSplit
-command Deft   ALEGoToDefinitionInTab
-command Defv   ALEGoToDefinitionInVSplit
+command Defs   ALEGoToDefinition -split
+command Deft   ALEGoToDefinition -tab
+command Defv   ALEGoToDefinition -vsplit
 
 " -----------------
 " Language settings
