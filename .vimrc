@@ -112,14 +112,6 @@ nnoremap JJ <C-W>j
 nnoremap KK <C-W>k
 nnoremap LL <C-W>l
 
-" Find files using Telescope command-line sugar.
-if has('nvim')
-  nnoremap <leader>ff <cmd>Telescope find_files<cr>
-  nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-  nnoremap <leader>fb <cmd>Telescope buffers<cr>
-  nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-endif
-
 " --------
 " Commands
 " --------
@@ -129,6 +121,14 @@ command Def    ALEGoToDefinition
 command Defs   ALEGoToDefinition -split
 command Deft   ALEGoToDefinition -tab
 command Defv   ALEGoToDefinition -vsplit
+
+" Shortcuts for Telescope
+if has('nvim')
+  command Tf Telescope find_files
+  command Tg Telescope live_grep 
+  command Tb Telescope buffers 
+  command Th Telescope help_tags 
+endif
 
 " -----------------
 " Language settings
