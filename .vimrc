@@ -15,6 +15,10 @@ set smartindent                 " Enable smart-indent
 set smarttab                    " Enable smart-tabs
 set softtabstop=2               " Number of spaces per Tab
 
+if exists('+termguicolors')
+  set termguicolors
+endif
+
 " -------
 " Plugins
 " -------
@@ -41,6 +45,7 @@ let g:deoplete#enable_at_startup = 1
 Plug 'preservim/nerdtree'
 
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 Plug 'vim-airline/vim-airline'
 let g:airline_powerline_fonts = 1"
@@ -97,7 +102,8 @@ Plug 'ryanoasis/vim-devicons'
 " Initialize plugin system
 call plug#end()
 
-colorscheme dracula
+" colorscheme dracula
+colorscheme onehalfdark
 
 " --------------
 " Key remappings
