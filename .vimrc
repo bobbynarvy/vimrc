@@ -46,6 +46,7 @@ Plug 'preservim/nerdtree'
 
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'arcticicestudio/nord-vim'
 
 Plug 'vim-airline/vim-airline'
 let g:airline_powerline_fonts = 1"
@@ -103,7 +104,8 @@ Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " colorscheme dracula
-colorscheme onehalfdark
+" colorscheme onehalfdark
+colorscheme nord
 
 " --------------
 " Key remappings
