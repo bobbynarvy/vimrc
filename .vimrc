@@ -72,30 +72,20 @@ endif
 
 Plug 'dense-analysis/ale'
 
-Plug 'terryma/vim-multiple-cursors'
-
 " Git-related plugins
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " Language-related plugins
 
-" Elixir
-Plug 'elixir-editors/vim-elixir'
-Plug 'slashmili/alchemist.vim'
-
-Plug 'pangloss/vim-javascript'
-
-Plug 'leafgarland/typescript-vim'
+" Once nvim-treesitter is installed, enable individual parsers
+" manually through :TSInstall {language}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 Plug 'plasticboy/vim-markdown'
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_conceal_code_blocks = 0
-
-Plug 'ekalinin/dockerfile.vim'
-
-Plug 'b4b4r07/vim-hcl'
 
 " NOTE: Make sure to install a patched font:
 " https://github.com/ryanoasis/nerd-fonts
@@ -107,6 +97,23 @@ call plug#end()
 " colorscheme dracula
 " colorscheme onehalfdark
 colorscheme nord
+
+" nvim-treesitter config; more at :help nvim-treesitter
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = {
+    "bash", "clojure", "graphql", "hcl", "html",
+    "javascript", "json", "ruby", "rust", "typescript",
+    "yaml"
+  },
+  highlight = {
+    enable = true
+  },
+  incremental_selection = {
+    enable = true
+  }
+}
+EOF
 
 " --------------
 " Key remappings
@@ -139,10 +146,3 @@ if has('nvim')
   command Tb Telescope buffers 
   command Th Telescope help_tags 
 endif
-
-" -----------------
-" Language settings
-" -----------------
-
-" run 'mix format' on save of elixir files
-autocmd BufWritePost *.exs,*.ex silent :!mix format %
