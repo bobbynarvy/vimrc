@@ -43,6 +43,7 @@ endif
 let g:deoplete#enable_at_startup = 1
 
 Plug 'preservim/nerdtree'
+let g:NERDTreeShowHidden = 1
 
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
@@ -133,7 +134,7 @@ command Defv   ALEGoToDefinition -vsplit
 
 " Shortcuts for Telescope
 if has('nvim')
-  command Tf Telescope find_files
+  command Tf Telescope find_files hidden=true
   command Tg Telescope live_grep 
   command Tb Telescope buffers 
   command Th Telescope help_tags 
