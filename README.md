@@ -1,6 +1,6 @@
 # vimrc
 
-My vimrc configuration
+My vimrc configuration. Used primarily for Neovim.
 
 ## Dependencies
 
@@ -22,7 +22,7 @@ Some external dependencies are required by vim plugins:
 
 When using neovim, make sure that the version installed is at least [0.5](https://github.com/neovim/neovim/releases).
 
-Also make sure that `init.vim` is created in order to load `.vimrc`. Instructions can be found [here](https://neovim.io/doc/user/nvim.html#nvim-from-vim).
+Make sure that the contents of this directory are visible in `~/.config/nvim`.
 
 ### Telescope
 
