@@ -30,3 +30,8 @@ On neovim, [Telescope](https://github.com/nvim-telescope/telescope.nvim) is used
 
 - [fd](https://github.com/sharkdp/fd)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
+
+### LSP
+
+Individual LSP servers must be installed to enable LSP functionality. Supported languages
+can be found [here](https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md).
