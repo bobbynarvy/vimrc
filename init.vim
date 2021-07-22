@@ -33,13 +33,7 @@ endif
 " Specify a directory for plugins
 call plug#begin(data_dir . '/plugged')
 
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 let g:deoplete#enable_at_startup = 1
 
 Plug 'preservim/nerdtree'
@@ -61,14 +55,9 @@ Plug 'yggdroot/indentline'
 
 Plug 'tpope/vim-commentary'
 
-if has('nvim')
-  Plug 'nvim-lua/popup.nvim'
-  Plug 'nvim-lua/plenary.nvim'
-  Plug 'nvim-telescope/telescope.nvim'
-else
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  Plug 'junegunn/fzf.vim'
-endif
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 " Git-related plugins
 Plug 'tpope/vim-fugitive'
@@ -116,12 +105,10 @@ nnoremap LL <C-W>l
 " --------
 
 " Shortcuts for Telescope
-if has('nvim')
-  command Tf Telescope find_files hidden=true
-  command Tg Telescope live_grep 
-  command Tb Telescope buffers 
-  command Th Telescope help_tags 
-endif
+command Tf Telescope find_files hidden=true
+command Tg Telescope live_grep 
+command Tb Telescope buffers 
+command Th Telescope help_tags 
 
 " enable lua config
 lua require('config')
