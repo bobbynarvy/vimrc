@@ -33,9 +33,6 @@ endif
 " Specify a directory for plugins
 call plug#begin(data_dir . '/plugged')
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-let g:deoplete#enable_at_startup = 1
-
 Plug 'preservim/nerdtree'
 let g:NERDTreeShowHidden = 1
 
