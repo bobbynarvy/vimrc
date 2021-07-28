@@ -53,3 +53,18 @@ for _, lsp in ipairs(servers) do
     }
   }
 end
+
+-- nvim-compe
+vim.o.completeopt = "menuone,noselect"
+require'compe'.setup {
+  source = {
+    path = true;
+    buffer = true;
+    tags = true;
+    nvim_lsp = true;
+    nvim_lua = true;
+    vsnip = true;
+    ultisnips = true;
+    luasnip = true;
+  };
+}
