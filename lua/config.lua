@@ -17,6 +17,7 @@ require'nvim-treesitter.configs'.setup {
 -- Config info can be found here:
 -- https://github.com/neovim/nvim-lspconfig#keybindings-and-completion
 -- https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md
+require'lspconfig'.nimls.setup{}
 require'lspconfig'.tsserver.setup{}
 local nvim_lsp = require('lspconfig')
 
