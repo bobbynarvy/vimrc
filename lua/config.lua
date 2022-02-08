@@ -3,7 +3,7 @@ require'nvim-treesitter.configs'.setup {
   ensure_installed = {
     "bash", "clojure", "graphql", "hcl", "html",
     "javascript", "json", "ruby", "rust", "typescript",
-    "yaml"
+    "yaml", "zig"
   },
   highlight = {
     enable = true
