@@ -4,7 +4,7 @@ My vimrc configuration. Used primarily for Neovim.
 
 ## Installation notes:
 
-Make sure that the Neovim version installed is at least [0.5](https://github.com/neovim/neovim/releases).
+Make sure that the Neovim version installed is at least [0.7](https://github.com/neovim/neovim/releases).
 
 Make sure that the contents of this directory are visible in `~/.config/nvim`.
 
@@ -24,7 +24,7 @@ Some external dependencies are required by vim plugins:
 ### LSP
 
 Individual LSP servers must be installed to enable LSP functionality. Supported languages
-can be found [here](https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md).
+can be found [here](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md).
 
 ### Other notes:
 
