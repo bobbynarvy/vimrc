@@ -3,7 +3,7 @@
 -- more at :help nvim-treesitter
 require'nvim-treesitter.configs'.setup {
   ensure_installed = {
-    "bash", "c", "clojure", "graphql", "hcl", "html",
+    "bash", "c", "clojure", "graphql", "go", "hcl", "html",
     "javascript", "json", "ruby", "rust", "typescript",
     "yaml", "zig"
   },
@@ -39,8 +39,9 @@ end
 -- https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md
 require'lspconfig'.tsserver.setup{}
 require'lspconfig'.clangd.setup{}
+require'lspconfig'.gopls.setup{}
 local nvim_lsp = require('lspconfig')
-local servers = { 'tsserver', 'clangd' }
+local servers = { 'tsserver', 'clangd', 'gopls' }
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
