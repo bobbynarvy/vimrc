@@ -5,5 +5,5 @@ endif
 augroup filetypedetect
   au! BufRead,BufNewFile *.zig		setfiletype zig
   autocmd FileType zig setlocal commentstring=//\ %s
-  autocmd FileType go setlocal tabstop=4
+  autocmd FileType go setlocal tabstop=4 shiftwidth=4
 augroup END
