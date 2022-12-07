@@ -53,6 +53,8 @@ Plug 'yggdroot/indentline'
 
 Plug 'tpope/vim-commentary'
 
+Plug 'phaazon/hop.nvim'
+
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -73,8 +75,6 @@ Plug 'plasticboy/vim-markdown'
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_conceal_code_blocks = 0
-
-Plug 'alaviss/nim.nvim'
 
 " NOTE: Make sure to install a patched font:
 " https://github.com/ryanoasis/nerd-fonts

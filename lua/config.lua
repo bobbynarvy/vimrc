@@ -15,8 +15,8 @@ require'nvim-treesitter.configs'.setup {
   }
 }
 
--- nvim-lspconfig config
--- =====================
+-- nvim-lsp config
+-- ===============
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -68,3 +68,6 @@ require'compe'.setup {
     luasnip = true;
   };
 }
+
+-- phaazon/hop.nvim
+require'hop'.setup()
