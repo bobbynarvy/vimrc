@@ -71,3 +71,30 @@ require'compe'.setup {
 
 -- phaazon/hop.nvim
 require'hop'.setup()
+
+-- Key remappings
+-- ==============
+-- more info: https://github.com/nanotee/nvim-lua-guide#vimkeymap
+
+-- Remap :tabprev and :tabnext
+vim.keymap.set('n', 'gh', 'gT')
+vim.keymap.set('n', 'gl', 'gt')
+
+-- Remap window switching 
+vim.keymap.set('n', 'HH', '<C-W>h')
+vim.keymap.set('n', 'JJ', '<C-W>j')
+vim.keymap.set('n', 'KK', '<C-W>k')
+vim.keymap.set('n', 'LL', '<C-W>l')
+
+-- Commands
+-- ========
+-- more info: https://github.com/nanotee/nvim-lua-guide#defining-user-commands
+
+-- Shortcuts for Telescope
+vim.api.nvim_create_user_command('Tf', 'Telescope find_files hidden=true', {})
+vim.api.nvim_create_user_command('Tg', 'Telescope live_grep', {})
+vim.api.nvim_create_user_command('Tb', 'Telescope buffers', {})
+vim.api.nvim_create_user_command('Th', 'Telescope help_tags', {})
+
+vim.api.nvim_create_user_command('NT', 'NERDTree', {})
+vim.api.nvim_create_user_command('HW', 'HopWord', {})

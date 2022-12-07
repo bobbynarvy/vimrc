@@ -87,29 +87,5 @@ call plug#end()
 " colorscheme onehalfdark
 colorscheme nord
 
-" --------------
-" Key remappings
-" --------------
-
-" Remap :tabprev and :tabnext
-nnoremap gh gT
-nnoremap gl gt
-
-" Remap window switching
-nnoremap HH <C-W>h
-nnoremap JJ <C-W>j
-nnoremap KK <C-W>k
-nnoremap LL <C-W>l
-
-" --------
-" Commands
-" --------
-
-" Shortcuts for Telescope
-command Tf Telescope find_files hidden=true
-command Tg Telescope live_grep 
-command Tb Telescope buffers 
-command Th Telescope help_tags 
-
 " enable lua config
 lua require('config')
