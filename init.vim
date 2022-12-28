@@ -36,6 +36,7 @@ call plug#begin(data_dir . '/plugged')
 
 Plug 'preservim/nerdtree'
 let g:NERDTreeShowHidden = 1
+let NERDTreeIgnore=['\.o$', '\.d$', '\~$']
 
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
