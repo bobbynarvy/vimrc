@@ -68,6 +68,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 
+Plug 'lluchs/vim-wren'
+
 " Once nvim-treesitter is installed, enable individual parsers
 " manually through :TSInstall {language}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
