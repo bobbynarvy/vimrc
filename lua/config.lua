@@ -4,7 +4,7 @@
 require'nvim-treesitter.configs'.setup {
   ensure_installed = {
     "bash", "c", "clojure", "graphql", "go", "hcl", "html",
-    "javascript", "json", "ruby", "rust", "typescript",
+    "javascript", "json", "lua", "ruby", "rust", "typescript",
     "yaml", "zig"
   },
   highlight = {
@@ -41,7 +41,7 @@ require'lspconfig'.tsserver.setup{}
 require'lspconfig'.clangd.setup{}
 require'lspconfig'.gopls.setup{}
 local nvim_lsp = require('lspconfig')
-local servers = { 'tsserver', 'clangd', 'gopls' }
+local servers = { 'tsserver', 'clangd', 'gopls', 'zls' }
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
