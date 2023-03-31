@@ -16,7 +16,6 @@ Some external dependencies are required by vim plugins:
 
 - `gcc`, `clang`, etc - Required by `nvim-treesitter`
   - can be installed with `sudo apt install build-essential` in Ubuntu installations
-- `ryanoasis/vim-devicons` - Requires a patched font that can be found [here](https://github.com/ryanoasis/nerd-fonts). Make sure that font is installed and used by the terminal that runs Vim.
 - `Telescope` - requires the following:
   - [fd](https://github.com/sharkdp/fd)
   - [ripgrep](https://github.com/BurntSushi/ripgrep)
