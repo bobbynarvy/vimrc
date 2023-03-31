@@ -34,9 +34,7 @@ endif
 " Specify a directory for plugins
 call plug#begin(data_dir . '/plugged')
 
-Plug 'preservim/nerdtree'
-let g:NERDTreeShowHidden = 1
-let NERDTreeIgnore=['\.o$', '\.d$', '\~$']
+Plug 'nvim-tree/nvim-tree.lua'
 
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sonph/onehalf', { 'rtp': 'vim' }

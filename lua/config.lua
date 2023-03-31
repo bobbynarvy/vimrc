@@ -3,7 +3,7 @@
 -- more at :help nvim-treesitter
 require'nvim-treesitter.configs'.setup {
   ensure_installed = {
-    "bash", "c", "clojure", "graphql", "go", "hcl", "html",
+    "bash", "c", "clojure", "go", "hare", "html",
     "javascript", "json", "lua", "ruby", "rust", "typescript",
     "yaml", "zig"
   },
@@ -72,6 +72,9 @@ require'compe'.setup {
 -- phaazon/hop.nvim
 require'hop'.setup()
 
+-- nvim-tree
+require'nvim-tree'.setup()
+
 -- Key remappings
 -- ==============
 -- more info: https://github.com/nanotee/nvim-lua-guide#vimkeymap
@@ -96,5 +99,5 @@ vim.api.nvim_create_user_command('Tg', 'Telescope live_grep', {})
 vim.api.nvim_create_user_command('Tb', 'Telescope buffers', {})
 vim.api.nvim_create_user_command('Th', 'Telescope help_tags', {})
 
-vim.api.nvim_create_user_command('NT', 'NERDTree', {})
+vim.api.nvim_create_user_command('NT', 'NvimTreeToggle', {})
 vim.api.nvim_create_user_command('HW', 'HopWord', {})
