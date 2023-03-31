@@ -28,6 +28,7 @@ can be found [here](https://github.com/neovim/nvim-lspconfig/blob/master/doc/ser
 
 ### Other notes:
 
+- The scripts `init.sh` and `install.sh` (must be run as root) are included to automate some of the steps described above.
 - Make sure that true colors is supported by the terminal. Test is through the `truecolor.sh` script.
 - When using with *tmux*, **airline** does not display properly. Make sure that `.tmux.conf` is symlinked and loaded with `tmux source-file ~/.tmux.conf` from the shell.
 - Add `.swp` and `.swo` as files to be (globally) ignored by git. 
