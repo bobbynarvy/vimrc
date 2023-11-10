@@ -73,7 +73,21 @@ require'compe'.setup {
 require'hop'.setup()
 
 -- nvim-tree
-require'nvim-tree'.setup()
+require'nvim-tree'.setup({
+  renderer = {
+    icons = {
+      show = {
+        file = false,
+        folder = false,
+        folder_arrow = false,
+        git = false,
+        modified = false,
+        diagnostics = false,
+        bookmarks = false,
+      }
+    }
+  }
+})
 
 -- Key remappings
 -- ==============
@@ -100,4 +114,6 @@ vim.api.nvim_create_user_command('Tb', 'Telescope buffers', {})
 vim.api.nvim_create_user_command('Th', 'Telescope help_tags', {})
 
 vim.api.nvim_create_user_command('NT', 'NvimTreeToggle', {})
+vim.api.nvim_create_user_command('NTF', 'NvimTreeFocus', {})
+vim.api.nvim_create_user_command('NTR', 'NvimTreeRefresh', {})
 vim.api.nvim_create_user_command('HW', 'HopWord', {})
