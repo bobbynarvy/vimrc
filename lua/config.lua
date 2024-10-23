@@ -37,11 +37,11 @@ end
 -- Config info can be found here:
 -- https://github.com/neovim/nvim-lspconfig#keybindings-and-completion
 -- https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md
-require'lspconfig'.tsserver.setup{}
+require'lspconfig'.ts_ls.setup{}
 require'lspconfig'.clangd.setup{}
 require'lspconfig'.gopls.setup{}
 local nvim_lsp = require('lspconfig')
-local servers = { 'tsserver', 'clangd', 'gopls', 'zls' }
+local servers = { 'clangd', 'gopls', 'zls', 'ts_ls' }
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
